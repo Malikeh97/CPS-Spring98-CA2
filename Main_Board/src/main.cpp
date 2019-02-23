@@ -26,17 +26,17 @@ void loop() {
   if(Serial.available()>= 4){
     UT_data = Serial.read();
     lcd.setCursor(0,0);
-    lcd.print("UTData");
+    lcd.print("UTData: ");
     lcd.print(UT_data);
   }
   if (altSerial.available()) {
     distance = altSerial.readStringUntil('\n');
     lcd.setCursor(0,1);
-    lcd.print("Distance ");
+    lcd.print("Distance: ");
     lcd.print(distance);
     tempeture = altSerial.readStringUntil('\n');
     lcd.setCursor(0,2);
-    lcd.print("Tempeture ");
+    lcd.print("Tempeture: ");
     lcd.print(tempeture);
     
   }
