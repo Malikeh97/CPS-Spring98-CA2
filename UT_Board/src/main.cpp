@@ -56,8 +56,9 @@ float calc_y_out() {
 
 
 void setup() {
+  float total = 0.0;
   Wire.begin(); // Initiate the Wire
-  Serial.begin(9600);
+  Serial.begin(9600, SERIAL_8E1);
   delay(100);
   // Enable measurement
   Wire.beginTransmission(ADXLAddress);
@@ -71,7 +72,7 @@ void loop() {
   float x_out = calc_x_out();
   float y_out = calc_y_out();
 
-  float total = y_out*y_out + x_out*x_out;
+  total += y_out*y_out + x_out*x_out;
   Serial.print(total);
   delay(100);
 }

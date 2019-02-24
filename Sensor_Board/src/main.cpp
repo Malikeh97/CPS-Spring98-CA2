@@ -1,4 +1,4 @@
-#include <Arduino.h>
+x#include <Arduino.h>
 #include <LM35.h>
 #include <hcsr04.h>
 #include <Ultrasonic.h>
@@ -12,7 +12,7 @@ Ultrasonic ultrasonic(TRIG_PIN, ECHO_PIN);
 
 LM35 temp(A0);
 void setup(){
-    Serial.begin(9600);
+    Serial.begin(9600, SERIAL_8E1);
     ultrasonic.setTimeout(40000UL);
 }
 

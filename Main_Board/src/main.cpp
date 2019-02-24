@@ -14,7 +14,7 @@ String distance;
 String tempeture;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600, SERIAL_8E1);
   lcd.begin(16, 3);
   
   altSerial.begin(9600);
